@@ -1,0 +1,49 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon\r
+._*
+.Spotlight-V100/
+.Trashes/
+.fseventsd/
+.VolumeIcon.icns
+
+# VS Code
+.vscode/
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# C/C++ build artifacts
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.ilk
+*.pdb
+*.gch
+
+# Build folders
+build/
+bin/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+
+# Editor temporary files
+*~
+*.swp
+*.swo
+*.tmp
+*.log
+
+# macOS Finder/TimeMachine
+.VolumeIcon.icns
+.Spotlight-V100/
+ehthumbs.db
+Thumbs.db
