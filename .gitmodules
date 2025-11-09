@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/GRP-Team202511/u-finder-backend.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/GRP-Team202511/u-finder-frontend.git
