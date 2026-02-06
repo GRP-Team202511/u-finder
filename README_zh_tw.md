@@ -36,8 +36,4 @@ U Finder 是一款基於大語言模型（LLM）的智慧型大學推薦系統�
 [`docs/database`](docs/database) 目錄包含完整的資料庫架構文檔：
 
 - **SQL 文件**：完整的資料庫表結構定義
-- **ER 圖**：資料庫架構的可視化表示
-
-查看互動式資料庫圖表：
-
-<iframe src="https://dbdiagram.io/d/6985a34bbd82f5fce2dd1312" width="100%" height="500" frameborder="0"></iframe>
+- **ER 圖**：[📊 查看互動式ER圖](https://dbdiagram.io/d/6985a34bbd82f5fce2dd1312)

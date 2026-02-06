@@ -36,8 +36,4 @@ U Finder is an intelligent university recommendation system powered by large lan
 The [`docs/database`](docs/database) directory contains comprehensive database schema documentation:
 
 - **SQL Files**: Complete database table structure definitions
-- **ER Diagram**: Visual database schema representation
-
-View the interactive database diagram:
-
-<iframe src="https://dbdiagram.io/d/6985a34bbd82f5fce2dd1312" width="100%" height="500" frameborder="0"></iframe>
+- **ER Diagram**: [📊 View Interactive ER Diagram](https://dbdiagram.io/d/6985a34bbd82f5fce2dd1312)
