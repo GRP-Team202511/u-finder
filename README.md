@@ -18,7 +18,7 @@ U Finder is an intelligent university recommendation system powered by large lan
 
 ### Backend Stack
 - **Framework**: FastAPI
-- **Database**: MySQL
+- **Database**: PostgreSQL
 - **LLM Integration**: 
 - **Authentication**: JWT Authentication
 - **Deployment**: Docker

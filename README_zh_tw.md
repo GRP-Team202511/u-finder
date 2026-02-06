@@ -18,7 +18,7 @@ U Finder 是一款基於大語言模型（LLM）的智慧型大學推薦系統�
 
 ### 後端技術棧
 - **框架**: FastAPI
-- **資料庫**: MySQL
+- **資料庫**: PostgreSQL
 - **LLM 整合**: 
 - **認證**: JWT 認證
 - **部署**: Docker
