@@ -33,11 +33,11 @@ U Finder 是一个基于大语言模型（LLM）的智能大学推荐系统。�
 
 ## 数据库文档
 
-`docs/database` 目录包含完整的数据库架构文档：
+[`docs/database`](docs/database) 目录包含完整的数据库架构文档：
 
 - **SQL文件**: 完整的数据库表结构定义
 - **ER图**: 数据库架构的可视化表示
 
-您可以在下方查看交互式数据库图表：
+查看交互式数据库图表：
 
-<iframe width="560" height="315" src='https://dbdiagram.io/e/6985a34bbd82f5fce2dd1312/6985ae5cbd82f5fce2de87b7'></iframe>
+<iframe src="https://dbdiagram.io/d/6985a34bbd82f5fce2dd1312" width="100%" height="500" frameborder="0"></iframe>
