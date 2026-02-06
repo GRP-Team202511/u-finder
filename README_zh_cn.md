@@ -18,7 +18,7 @@ U Finder 是一个基于大语言模型（LLM）的智能大学推荐系统。�
 
 ### 后端技术栈
 - **框架**: FastAPI
-- **数据库**: MySQL
+- **数据库**: PostgreSQL
 - **LLM集成**: 
 - **认证**: JWT认证
 - **部署**: Docker
@@ -30,3 +30,12 @@ U Finder 是一个基于大语言模型（LLM）的智能大学推荐系统。�
 - **状态管理**: Pinia
 - **路由**: Vue Router
 - **HTTP客户端**: Axios
+
+## 数据库文档
+
+[`docs/database`](docs/database) 目录包含完整的数据库架构文档：
+
+- **SQL文件**: 完整的数据库表结构定义
+- **ER图**: [📊 查看交互式ER图](https://dbdiagram.io/e/6985a34bbd82f5fce2dd1312/6985ae5cbd82f5fce2de87b7)
+
+![ER图](docs/database/images/dev_u_finder.png)

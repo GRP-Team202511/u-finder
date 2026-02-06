@@ -18,7 +18,7 @@ U Finder is an intelligent university recommendation system powered by large lan
 
 ### Backend Stack
 - **Framework**: FastAPI
-- **Database**: MySQL
+- **Database**: PostgreSQL
 - **LLM Integration**: 
 - **Authentication**: JWT Authentication
 - **Deployment**: Docker
@@ -30,3 +30,12 @@ U Finder is an intelligent university recommendation system powered by large lan
 - **State Management**: Pinia
 - **Routing**: Vue Router
 - **HTTP Client**: Axios
+
+## Database Documentation
+
+The [`docs/database`](docs/database) directory contains comprehensive database schema documentation:
+
+- **SQL Files**: Complete database table structure definitions
+- **ER Diagram**: [📊 View Interactive ER Diagram](https://dbdiagram.io/e/6985a34bbd82f5fce2dd1312/6985ae5cbd82f5fce2de87b7)
+
+![ER Diagram](docs/database/images/dev_u_finder.png)
