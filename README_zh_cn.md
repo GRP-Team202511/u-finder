@@ -36,6 +36,6 @@ U Finder 是一个基于大语言模型（LLM）的智能大学推荐系统。�
 [`docs/database`](docs/database) 目录包含完整的数据库架构文档：
 
 - **SQL文件**: 完整的数据库表结构定义
-- **ER图**: [📊 查看交互式ER图](https://dbdiagram.io/d/6985a34bbd82f5fce2dd1312)
+- **ER图**: [📊 查看交互式ER图](https://dbdiagram.io/e/6985a34bbd82f5fce2dd1312/6985ae5cbd82f5fce2de87b7)
 
 ![ER图](docs/database/images/dev_u_finder.png)
