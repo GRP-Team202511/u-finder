@@ -37,3 +37,5 @@ The [`docs/database`](docs/database) directory contains comprehensive database s
 
 - **SQL Files**: Complete database table structure definitions
 - **ER Diagram**: [📊 View Interactive ER Diagram](https://dbdiagram.io/d/6985a34bbd82f5fce2dd1312)
+
+![ER Diagram](docs/database/images/dev_u_finder.png)
