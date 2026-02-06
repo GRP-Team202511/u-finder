@@ -30,3 +30,14 @@ U Finder is an intelligent university recommendation system powered by large lan
 - **State Management**: Pinia
 - **Routing**: Vue Router
 - **HTTP Client**: Axios
+
+## Database Documentation
+
+The `docs/database` directory contains comprehensive database schema documentation:
+
+- **SQL Files**: Complete database table structure definitions
+- **ER Diagram**: Visual database schema representation
+
+You can view the interactive database diagram below:
+
+<iframe width="560" height="315" src='https://dbdiagram.io/e/6985a34bbd82f5fce2dd1312/6985ae5cbd82f5fce2de87b7'></iframe>
