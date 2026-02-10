@@ -31,6 +31,42 @@ U Finder 是一款基於大語言模型（LLM）的智慧型大學推薦系統�
 - **路由**: Vue Router
 - **HTTP 客戶端**: Axios
 
+## 快速開始
+
+### 資料庫設置
+
+1. 進入資料庫目錄：
+```bash
+cd database
+```
+
+2. 複製環境變數範本並設定：
+```bash
+cp .env.example .env
+```
+
+3. 編輯 `.env` 檔案，設定您的資料庫憑證。
+
+4. 啟動 PostgreSQL 資料庫：
+```bash
+docker compose up -d
+```
+
+5. 驗證資料庫運行狀態：
+```bash
+docker compose ps
+```
+
+資料庫將自動使用 `db/init.sql` 中定義的架構進行初始化。
+
+### 後端設置
+
+即將推出...
+
+### 前端設置
+
+即將推出...
+
 ## 資料庫文檔
 
 [`docs/database`](docs/database) 目錄包含完整的資料庫架構文檔：
