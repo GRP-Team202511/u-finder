@@ -31,6 +31,42 @@ U Finder is an intelligent university recommendation system powered by large lan
 - **Routing**: Vue Router
 - **HTTP Client**: Axios
 
+## Quick Start
+
+### Database Setup
+
+1. Navigate to the database directory:
+```bash
+cd database
+```
+
+2. Copy the environment template and configure your settings:
+```bash
+cp .env.example .env
+```
+
+3. Edit `.env` file with your preferred database credentials.
+
+4. Start the PostgreSQL database:
+```bash
+docker compose up -d
+```
+
+5. Verify the database is running:
+```bash
+docker compose ps
+```
+
+The database will be initialized automatically with the schema defined in `db/init.sql`.
+
+### Backend Setup
+
+Coming soon...
+
+### Frontend Setup
+
+Coming soon...
+
 ## Database Documentation
 
 The [`docs/database`](docs/database) directory contains comprehensive database schema documentation:
