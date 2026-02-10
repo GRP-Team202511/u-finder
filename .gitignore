@@ -47,3 +47,8 @@ CMakeCache.txt
 .Spotlight-V100/
 ehthumbs.db
 Thumbs.db
+
+# env
+.env
+.env.*
+!.env.example
