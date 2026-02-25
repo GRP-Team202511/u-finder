@@ -19,6 +19,7 @@ U Finder 是一个基于大语言模型（LLM）的智能大学推荐系统。�
 ### 后端技术栈
 - **框架**: FastAPI
 - **数据库**: PostgreSQL
+- **缓存**: Redis
 - **LLM集成**: 
 - **认证**: JWT认证
 - **部署**: Docker
@@ -45,19 +46,28 @@ cd database
 cp .env.example .env
 ```
 
-3. 编辑 `.env` 文件，设置您的数据库凭据。
+3. 编辑 `.env` 文件，配置所需的环境变量：
 
-4. 启动 PostgreSQL 数据库：
+   | 变量 | 说明 | 默认值 |
+   |---|---|---|
+   | `POSTGRES_USER` | PostgreSQL 用户名 | — |
+   | `POSTGRES_PASSWORD` | PostgreSQL 密码 | — |
+   | `POSTGRES_DB` | PostgreSQL 数据库名 | — |
+   | `POSTGRES_PORT` | PostgreSQL 宿主机端口 | `5432` |
+   | `REDIS_PORT` | Redis 宿主机端口 | `6379` |
+   | `REDIS_PASSWORD` | Redis 密码 | — |
+
+4. 启动 PostgreSQL 和 Redis：
 ```bash
 docker compose up -d
 ```
 
-5. 验证数据库运行状态：
+5. 验证所有服务运行状态：
 ```bash
 docker compose ps
 ```
 
-数据库将自动使用 `db/init.sql` 中定义的架构进行初始化。
+PostgreSQL 将自动使用 `db/init.sql` 中定义的架构进行初始化。Redis 用于会话与 Token 管理。
 
 ### 后端设置
 
