@@ -19,6 +19,7 @@ U Finder is an intelligent university recommendation system powered by large lan
 ### Backend Stack
 - **Framework**: FastAPI
 - **Database**: PostgreSQL
+- **Cache**: Redis
 - **LLM Integration**: 
 - **Authentication**: JWT Authentication
 - **Deployment**: Docker
@@ -45,19 +46,28 @@ cd database
 cp .env.example .env
 ```
 
-3. Edit `.env` file with your preferred database credentials.
+3. Edit `.env` file with your preferred credentials. The following variables are required:
 
-4. Start the PostgreSQL database:
+   | Variable | Description | Default |
+   |---|---|---|
+   | `POSTGRES_USER` | PostgreSQL username | — |
+   | `POSTGRES_PASSWORD` | PostgreSQL password | — |
+   | `POSTGRES_DB` | PostgreSQL database name | — |
+   | `POSTGRES_PORT` | PostgreSQL host port | `5432` |
+   | `REDIS_PORT` | Redis host port | `6379` |
+   | `REDIS_PASSWORD` | Redis password | — |
+
+4. Start PostgreSQL and Redis:
 ```bash
 docker compose up -d
 ```
 
-5. Verify the database is running:
+5. Verify all services are running:
 ```bash
 docker compose ps
 ```
 
-The database will be initialized automatically with the schema defined in `db/init.sql`.
+PostgreSQL will be initialized automatically with the schema defined in `db/init.sql`. Redis is used for session/token management.
 
 ### Backend Setup
 

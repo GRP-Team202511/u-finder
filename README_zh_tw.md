@@ -19,6 +19,7 @@ U Finder 是一款基於大語言模型（LLM）的智慧型大學推薦系統�
 ### 後端技術棧
 - **框架**: FastAPI
 - **資料庫**: PostgreSQL
+- **快取**: Redis
 - **LLM 整合**: 
 - **認證**: JWT 認證
 - **部署**: Docker
@@ -45,19 +46,28 @@ cd database
 cp .env.example .env
 ```
 
-3. 編輯 `.env` 檔案，設定您的資料庫憑證。
+3. 編輯 `.env` 檔案，設定所需的環境變數：
 
-4. 啟動 PostgreSQL 資料庫：
+   | 變數 | 說明 | 預設值 |
+   |---|---|---|
+   | `POSTGRES_USER` | PostgreSQL 使用者名稱 | — |
+   | `POSTGRES_PASSWORD` | PostgreSQL 密碼 | — |
+   | `POSTGRES_DB` | PostgreSQL 資料庫名稱 | — |
+   | `POSTGRES_PORT` | PostgreSQL 主機端口 | `5432` |
+   | `REDIS_PORT` | Redis 主機端口 | `6379` |
+   | `REDIS_PASSWORD` | Redis 密碼 | — |
+
+4. 啟動 PostgreSQL 與 Redis：
 ```bash
 docker compose up -d
 ```
 
-5. 驗證資料庫運行狀態：
+5. 驗證所有服務運行狀態：
 ```bash
 docker compose ps
 ```
 
-資料庫將自動使用 `db/init.sql` 中定義的架構進行初始化。
+PostgreSQL 將自動使用 `db/init.sql` 中定義的架構進行初始化。Redis 用於會話與 Token 管理。
 
 ### 後端設置
 
