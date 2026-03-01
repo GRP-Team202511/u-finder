@@ -85,3 +85,7 @@ PostgreSQL 将自动使用 `db/init.sql` 中定义的架构进行初始化。Red
 - **ER图**: [📊 查看交互式ER图](https://dbdiagram.io/e/69859812bd82f5fce2dbbe49/6988ca37bd82f5fce2076214)
 
 ![ER图](docs/database/images/dev_u_finder.png)
+
+## 许可证
+
+本项目基于 [Apache License 2.0](LICENSE) 许可证开源。

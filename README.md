@@ -85,3 +85,7 @@ The [`docs/database`](docs/database) directory contains comprehensive database s
 - **ER Diagram**: [📊 View Interactive ER Diagram](https://dbdiagram.io/e/69859812bd82f5fce2dbbe49/6988ca37bd82f5fce2076214)
 
 ![ER Diagram](docs/database/images/dev_u_finder.png)
+
+## License
+
+This project is licensed under the [Apache License 2.0](LICENSE).
