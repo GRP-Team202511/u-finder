@@ -82,7 +82,7 @@ Coming soon...
 The [`docs/database`](docs/database) directory contains comprehensive database schema documentation:
 
 - **SQL Files**: Complete database table structure definitions
-- **ER Diagram**: [📊 View Interactive ER Diagram](https://dbdiagram.io/e/69859812bd82f5fce2dbbe49/6988ca37bd82f5fce2076214)
+- **ER Diagram**: [📊 View Interactive ER Diagram](https://dbdiagram.io/e/69ae7a43cf54053b6f39329c/69afe47277d079431b482ce0)
 
 ![ER Diagram](docs/database/images/dev_u_finder.png)
 

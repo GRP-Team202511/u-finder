@@ -82,7 +82,7 @@ PostgreSQL 将自动使用 `db/init.sql` 中定义的架构进行初始化。Red
 [`docs/database`](docs/database) 目录包含完整的数据库架构文档：
 
 - **SQL文件**: 完整的数据库表结构定义
-- **ER图**: [📊 查看交互式ER图](https://dbdiagram.io/e/69859812bd82f5fce2dbbe49/6988ca37bd82f5fce2076214)
+- **ER图**: [📊 查看交互式ER图](https://dbdiagram.io/e/69ae7a43cf54053b6f39329c/69afe47277d079431b482ce0)
 
 ![ER图](docs/database/images/dev_u_finder.png)
 

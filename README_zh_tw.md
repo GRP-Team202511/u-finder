@@ -82,7 +82,7 @@ PostgreSQL 將自動使用 `db/init.sql` 中定義的架構進行初始化。Red
 [`docs/database`](docs/database) 目錄包含完整的資料庫架構文檔：
 
 - **SQL 文件**：完整的資料庫表結構定義
-- **ER 圖**：[📊 查看互動式ER圖](https://dbdiagram.io/e/69859812bd82f5fce2dbbe49/6988ca37bd82f5fce2076214)
+- **ER 圖**：[📊 查看互動式ER圖](https://dbdiagram.io/e/69ae7a43cf54053b6f39329c/69afe47277d079431b482ce0)
 
 ![ER圖](docs/database/images/dev_u_finder.png)
 
