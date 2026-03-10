@@ -116,9 +116,9 @@ COMMENT ON COLUMN "account"."user_type" IS '1=Student, 2=Institution, 99=Admin';
 
 COMMENT ON COLUMN "account"."totp_secret_encrypted" IS 'use AES-GCM to encrypt, `not null` if 2FA is enabled';
 
-COMMENT ON COLUMN "account"."email_verified" IS 'Whether the user''s email has been verified';
-
 COMMENT ON COLUMN "account"."updated_at" IS 'Auto-updated via trigger on UPDATE';
+
+COMMENT ON COLUMN "account"."email_verified" IS 'Whether the user''s email has been verified';
 
 COMMENT ON COLUMN "user_profile"."updated_at" IS 'Auto-updated via trigger on UPDATE';
 
