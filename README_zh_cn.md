@@ -12,7 +12,9 @@ U Finder 是一个基于大语言模型（LLM）的智能大学推荐系统。�
 - 📊 **数据可视化**: 直观展示大学信息和对比分析
 - ⚡ **高性能**: 基于FastAPI的高性能后端API
 - 🎨 **现代化UI**: 采用Vue 3构建的响应式前端界面
-- 💾 **可靠存储**: MySQL数据库确保数据安全可靠
+- � **安全保障**: 双因素认证 (2FA)、Passkey/WebAuthn、Cloudflare Turnstile
+- 🛡️ **管理员仪表盘**: 用户管理、LLM 成本监控、系统日志
+- 💾 **可靠存储**: PostgreSQL + Redis 确保数据安全与高性能
 
 ## 技术架构
 
@@ -20,62 +22,97 @@ U Finder 是一个基于大语言模型（LLM）的智能大学推荐系统。�
 - **框架**: FastAPI
 - **数据库**: PostgreSQL
 - **缓存**: Redis
-- **LLM集成**: 
-- **认证**: JWT认证
-- **部署**: Docker
+- **LLM集成**: Dify
+- **认证**: JWT + TOTP 2FA + Passkey/WebAuthn
+- **反机器人**: Cloudflare Turnstile
+- **部署**: Docker + GitHub Actions CI/CD
 
 ### 前端技术栈
 - **框架**: Vue 3 + Composition API
 - **构建工具**: Vite
-- **UI组件库**: TBD
+- **UI组件库**: shadcn-vue
 - **状态管理**: Pinia
 - **路由**: Vue Router
 - **HTTP客户端**: Axios
 
 ## 快速开始
 
-### 数据库设置
+### 后端设置
 
-1. 进入数据库目录：
+1. 克隆仓库（含子模块）：
+
 ```bash
-cd database
+git clone --recursive https://github.com/GRP-Team202511/u-finder
+cd u-finder/backend
 ```
 
-2. 复制环境变量模板并配置：
+2. 创建并激活虚拟环境：
+
+```bash
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
+```
+
+3. 安装依赖：
+
+```bash
+pip install -r requirements.txt
+```
+
+4. 配置环境变量：
+
 ```bash
 cp .env.example .env
+# 编辑 .env，填入数据库、Redis、Dify 和 SMTP 凭据
 ```
 
-3. 编辑 `.env` 文件，配置所需的环境变量：
+5. 通过 Docker Compose 启动 PostgreSQL 和 Redis：
 
-   | 变量 | 说明 | 默认值 |
-   |---|---|---|
-   | `POSTGRES_USER` | PostgreSQL 用户名 | — |
-   | `POSTGRES_PASSWORD` | PostgreSQL 密码 | — |
-   | `POSTGRES_DB` | PostgreSQL 数据库名 | — |
-   | `POSTGRES_PORT` | PostgreSQL 宿主机端口 | `5432` |
-   | `REDIS_PORT` | Redis 宿主机端口 | `6379` |
-   | `REDIS_PASSWORD` | Redis 密码 | — |
-
-4. 启动 PostgreSQL 和 Redis：
 ```bash
 docker compose up -d
 ```
 
-5. 验证所有服务运行状态：
+6. 启动开发服务器：
+
 ```bash
-docker compose ps
+python run.py
 ```
 
-PostgreSQL 将自动使用 `db/init.sql` 中定义的架构进行初始化。Redis 用于会话与 Token 管理。
+API 将在 `http://localhost:8000` 上可用。
 
-### 后端设置
-
-即将推出...
+更多详情请参阅[后端 README](backend/README.md)。
 
 ### 前端设置
 
-即将推出...
+1. 确保已安装 **Node.js**（v18+）和 **pnpm**（v8+）：
+
+```bash
+npm install -g pnpm
+```
+
+2. 进入前端用户应用目录并安装依赖：
+
+```bash
+cd frontend/u-finder
+pnpm install
+```
+
+3. 启动开发服务器：
+
+```bash
+pnpm dev
+```
+
+应用程序将在 `http://localhost:5173` 上可用。
+
+管理员面板请参阅 `frontend/u-finder-admin/`。
+
+更多详情请参阅[前端 README](frontend/README.md)。
 
 ## 数据库文档
 

@@ -12,7 +12,9 @@ U Finder is an intelligent university recommendation system powered by large lan
 - 📊 **Data Visualization**: Intuitive display of university information and comparative analysis
 - ⚡ **High Performance**: FastAPI-based high-performance backend API
 - 🎨 **Modern UI**: Responsive frontend built with Vue 3
-- 💾 **Reliable Storage**: MySQL database ensures secure and reliable data management
+- � **Security**: Two-factor authentication (2FA), Passkey/WebAuthn, Cloudflare Turnstile
+- 🛡️ **Admin Dashboard**: User management, LLM cost monitoring, system logs
+- 💾 **Reliable Storage**: PostgreSQL + Redis ensures secure and high-performance data management
 
 ## Technical Architecture
 
@@ -20,62 +22,97 @@ U Finder is an intelligent university recommendation system powered by large lan
 - **Framework**: FastAPI
 - **Database**: PostgreSQL
 - **Cache**: Redis
-- **LLM Integration**: 
-- **Authentication**: JWT Authentication
-- **Deployment**: Docker
+- **LLM Integration**: Dify
+- **Authentication**: JWT + TOTP 2FA + Passkey/WebAuthn
+- **Anti-Bot**: Cloudflare Turnstile
+- **Deployment**: Docker + GitHub Actions CI/CD
 
 ### Frontend Stack
 - **Framework**: Vue 3 + Composition API
 - **Build Tool**: Vite
-- **UI Component Library**: TBD
+- **UI Component Library**: shadcn-vue
 - **State Management**: Pinia
 - **Routing**: Vue Router
 - **HTTP Client**: Axios
 
 ## Quick Start
 
-### Database Setup
+### Backend Setup
 
-1. Navigate to the database directory:
+1. Clone the repository with submodules:
+
 ```bash
-cd database
+git clone --recursive https://github.com/GRP-Team202511/u-finder
+cd u-finder/backend
 ```
 
-2. Copy the environment template and configure your settings:
+2. Create and activate a virtual environment:
+
+```bash
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
+```
+
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Set up environment variables:
+
 ```bash
 cp .env.example .env
+# Edit .env with your database, Redis, Dify, and SMTP credentials
 ```
 
-3. Edit `.env` file with your preferred credentials. The following variables are required:
+5. Start PostgreSQL and Redis via Docker Compose:
 
-   | Variable | Description | Default |
-   |---|---|---|
-   | `POSTGRES_USER` | PostgreSQL username | — |
-   | `POSTGRES_PASSWORD` | PostgreSQL password | — |
-   | `POSTGRES_DB` | PostgreSQL database name | — |
-   | `POSTGRES_PORT` | PostgreSQL host port | `5432` |
-   | `REDIS_PORT` | Redis host port | `6379` |
-   | `REDIS_PASSWORD` | Redis password | — |
-
-4. Start PostgreSQL and Redis:
 ```bash
 docker compose up -d
 ```
 
-5. Verify all services are running:
+6. Start the development server:
+
 ```bash
-docker compose ps
+python run.py
 ```
 
-PostgreSQL will be initialized automatically with the schema defined in `db/init.sql`. Redis is used for session/token management.
+The API will be available at `http://localhost:8000`.
 
-### Backend Setup
-
-Coming soon...
+For more details, see the [Backend README](backend/README.md).
 
 ### Frontend Setup
 
-Coming soon...
+1. Ensure **Node.js** (v18+) and **pnpm** (v8+) are installed:
+
+```bash
+npm install -g pnpm
+```
+
+2. Navigate to the frontend user application and install dependencies:
+
+```bash
+cd frontend/u-finder
+pnpm install
+```
+
+3. Start the development server:
+
+```bash
+pnpm dev
+```
+
+The application will be available at `http://localhost:5173`.
+
+For the admin panel, see `frontend/u-finder-admin/`.
+
+For more details, see the [Frontend README](frontend/README.md).
 
 ## Database Documentation
 
